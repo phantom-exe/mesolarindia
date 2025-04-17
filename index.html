@@ -279,10 +279,7 @@
         .smiley {
             width: 120px;
             height: 120px;
-            background: linear-gradient(145deg, #ffd06b, #ffaa45);
             border-radius: 50%;
-            position: relative;
-            animation: bounce 3s infinite ease-in-out;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
         }
         
@@ -532,21 +529,6 @@
             opacity: 0.6;
         }
         
-        @keyframes bounce {
-            0%, 100% {
-                transform: translateY(0) rotate(0deg);
-            }
-            25% {
-                transform: translateY(-15px) rotate(-5deg);
-            }
-            50% {
-                transform: translateY(0) rotate(0deg);
-            }
-            75% {
-                transform: translateY(-7px) rotate(5deg);
-            }
-        }
-        
         @keyframes blink {
             0%, 45%, 55%, 100% {
                 transform: scaleY(1);
@@ -634,38 +616,44 @@
                 font-size: 1.4rem;
             }
             
+            .smiley-container {
+                margin: 30px 0;
+                flex-direction: column;
+                align-items: center;
+            }
+
             .smiley-wrapper {
-                width: 120px;
-                height: 120px;
+                width: 100px;
+                height: 100px;
             }
-            
+
             .smiley {
-                width: 90px;
-                height: 90px;
+                width: 80px;
+                height: 80px;
             }
-            
+
             .eyes {
-                top: 25px;
+                top: 20px;
             }
-            
+
             .eye {
                 width: 15px;
                 height: 15px;
             }
-            
+
             .eye::after {
                 width: 4px;
                 height: 4px;
                 top: 2px;
                 left: 2px;
             }
-            
+
             .mouth {
-                width: 45px;
-                height: 22px;
-                bottom: 22px;
+                width: 36px;
+                height: 18px;
+                bottom: 18px;
                 left: 22px;
-                border-bottom-width: 6px;
+                border-bottom-width: 5px;
             }
             
             .smiley-container::before,
@@ -736,13 +724,7 @@
         
         <div class="smiley-container">
             <div class="smiley-wrapper">
-                <div class="smiley">
-                    <div class="eyes">
-                        <div class="eye"></div>
-                        <div class="eye"></div>
-                    </div>
-                    <div class="mouth"></div>
-                </div>
+                <img src="sm.png" alt="Smiley" class="smiley" />
             </div>
         </div>
         
@@ -757,6 +739,7 @@
             <div class="progress-bar">
                 <div class="progress"></div>
             </div>
-            </div>
+        </div>
+    </div>
 </body>
 </html>
